@@ -26,7 +26,8 @@ _wob_swaysock=""
 [[ "${1}" ]] && [[ "${1}" =~ ^[0-9]{1,3}$ ]] || exit 0
 
 for pid in $( pgrep -u "$USER" "^wob$" ); do
-    _wob_swaysock="$( tr '\0' '\n' < "/proc/$pid/environ" | awk -F'=' '/^SWAYSOCK/ {print $2}' )"
+    _wob_swaysock="$( tr '\0' '\n' < "/proc/$pid/environ" | \
+        awk -F'=' '/^SWAYSOCK/ {print $2}' )"
     if [[ "${_wob_swaysock}" == "$SWAYSOCK" ]]; then
         _status="true"
     fi

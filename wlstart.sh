@@ -7,7 +7,8 @@ if command -v gsettings &>/dev/null; then
         gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 fi
 
-command -v fcitx5 &>/dev/null && ! pidof fcitx5 &>/dev/null && fcitx5 -d -r
+command -v fcitx5 &>/dev/null && \
+    ! pidof fcitx5 &>/dev/null && fcitx5 -d -r
 
 command -v lxqt-policykit-agent &>/dev/null && \
     ! pidof lxqt-policykit-agent &>/dev/null && \
