@@ -117,3 +117,20 @@ Screenshot:
 
 Session control, power control and screenshot are in right click menus.
 
+## Alt and Win
+
+There's a `keyswap.conf` under sway directory, which did following settings:
+
+- Remap `CapsLock` as `Ctrl`\
+- Swap `Alt` and `Win`\
+- Enable `Numlock`
+
+The left `Alt` key is the best position for the modifier key,
+but some applications may have useful default shortcuts combined with it,
+such as `Alt + b` `Alt + f` in bash for jumping backward and forward word by word.
+It is recommended to swap `Alt` and `Win` positions then set Win as the modifier key.
+
+There's another benefit about swapping `Alt` and `Win`, if you run a virtual
+machine also using sway, you could keep the VM's keys unswapped, then use the same
+sway keybinding configs without conflicting to your host machine.
+
