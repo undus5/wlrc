@@ -1,0 +1,12 @@
+# sway.config
+
+include base.conf
+include extension.conf
+# include keyswap.conf
+
+# exec swayidle timeout 7200 'swayctl.sh lock-screen'
+
+# output * background background.jpg fill
+# output * background #355486 solid_color
+# output * background #4c4c4c solid_color
+
