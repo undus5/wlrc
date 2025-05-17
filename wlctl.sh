@@ -94,13 +94,16 @@ bar-status() {
 
 lock-screen() {
     command -v swaylock &>/dev/null || printferr "command not found: swaylock\n"
-    pidof swaylock || swaylock --daemonize --ignore-empty-password \
+    pidof swaylock || swaylock \
+        --daemonize \
+        --ignore-empty-password \
         --indicator-idle-visible \
         --indicator-radius 50 \
         --indicator-thickness 13 \
         --indicator-x-position 80 \
         --indicator-y-position 80 \
-        --color 000000 --scaling solid_color
+        --color 000000 \
+        --scaling solid_color
 }
 
 lock-suspend() {
