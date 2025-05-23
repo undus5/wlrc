@@ -18,5 +18,3 @@ command -v kanshi &>/dev/null && \
     ! pidof kanshi &>/dev/null && \
         kanshi 2>&1 &
 
-command -v aria2.sh &>/dev/null && aria2.sh
-
