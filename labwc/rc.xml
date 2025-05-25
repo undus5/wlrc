@@ -27,7 +27,7 @@
         <!-- extension -->
         <keybind key="W-d">
             <action name="Execute">
-                <command>wmenu-run -f 'monospace bold 16'</command>
+                <command>wmenu-run -b -f 'monospace bold 16'</command>
             </action>
         </keybind>
         <keybind key="W-comma">
