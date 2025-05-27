@@ -2,7 +2,7 @@
 
 set -e
 
-printferr() {
+eprintf() {
     printf "${@}" >&2 && exit 1
 }
 
@@ -12,7 +12,7 @@ printferr() {
 #################################################################################
 
 wpctl-check() {
-    command -v wpctl &>/dev/null || printferr "command not found: wpctl\n"
+    command -v wpctl &>/dev/null || eprintf "command not found: wpctl\n"
 }
 
 vol-get() {
@@ -93,7 +93,7 @@ bar-status() {
 #################################################################################
 
 lock-screen() {
-    command -v swaylock &>/dev/null || printferr "command not found: swaylock\n"
+    command -v swaylock &>/dev/null || eprintf "command not found: swaylock\n"
     pidof swaylock || swaylock \
         --daemonize \
         --ignore-empty-password \
@@ -118,11 +118,11 @@ lock-suspend() {
 #################################################################################
 
 grim-check() {
-    command -v grim &>/dev/null || printferr "command not found: grim\n"
+    command -v grim &>/dev/null || eprintf "command not found: grim\n"
 }
 
 grimshot-check() {
-    command -v grimshot &>/dev/null || printferr "command not found: grimshot\n"
+    command -v grimshot &>/dev/null || eprintf "command not found: grimshot\n"
 }
 
 _save_path=~/Pictures/Screenshot.$(date +%y%m%d.%H%M%S).$(date +%N|cut -c1).png
@@ -140,6 +140,30 @@ screenshot-area() {
 screenshot-window() {
     grim-check && grimshot-check
     grimshot savecopy window ${_save_path}
+}
+
+#################################################################################
+# gsettings
+#################################################################################
+
+gsettings-check() {
+    command -v gsettings &>/dev/null || eprintf "command not found: gsettings\n"
+}
+
+gsettings-icon() {
+    gsettings-check
+    local _name="${1}"
+    [[ -n "${_name}" ]] || eprintf "icon theme undefined\n"
+    [[ -d "/usr/share/icons/${_name}" ]] || eprintf "icon theme not found: ${_name}\n"
+    gsettings set org.gnome.desktop.interface icon-theme "${_name}"
+}
+
+gsettings-gtk() {
+    gsettings-check
+    local _name="${1}"
+    [[ -n "${_name}" ]] || eprintf "gtk theme undefined\n"
+    [[ -d "/usr/share/themes/${_name}" ]] || eprintf "gtk theme not found: ${_name}\n"
+    gsettings set org.gnome.desktop.interface gtk-theme "${_name}"
 }
 
 #################################################################################

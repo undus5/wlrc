@@ -1,12 +1,5 @@
 #!/usr/bin/bash
 
-if command -v gsettings &>/dev/null; then
-    [[ -d /usr/share/icons/Papirus ]] && \
-        gsettings set org.gnome.desktop.interface icon-theme Papirus
-    [[ -d /usr/share/themes/Adwaita-dark ]] && \
-        gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
-fi
-
 command -v fcitx5 &>/dev/null && \
     ! pidof fcitx5 &>/dev/null && fcitx5 -d -r
 
