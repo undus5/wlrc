@@ -18,17 +18,16 @@ case "$1" in
         ;;
 esac
 
-_wob_pipe=~/.cache/$( basename "$SWAYSOCK" ).wob
-_status="false"
-_wob_swaysock=""
-
-[[ "$SWAYSOCK" ]] || (command -v wob &>/dev/null) || exit 0
+[[ "$WAYLAND_DISPLAY" ]] || (command -v wob &>/dev/null) || exit 0
 [[ "${1}" ]] && [[ "${1}" =~ ^[0-9]{1,3}$ ]] || exit 0
 
+_wob_pipe=~/.cache/${WAYLAND_DISPLAY}.wob
+_status="false"
+
 for pid in $( pgrep -u "$USER" "^wob$" ); do
-    _wob_swaysock="$( tr '\0' '\n' < "/proc/$pid/environ" | \
-        awk -F'=' '/^SWAYSOCK/ {print $2}' )"
-    if [[ "${_wob_swaysock}" == "$SWAYSOCK" ]]; then
+    _wob_wldisplay="$( tr '\0' '\n' < "/proc/$pid/environ" | \
+        awk -F'=' '/^WAYLAND_DISPLAY/ {print $2}' )"
+    if [[ "${_wob_wldisplay}" == "$WAYLAND_DISPLAY" ]]; then
         _status="true"
     fi
 done
