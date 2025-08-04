@@ -51,6 +51,7 @@ Session control:
 
 > Super + Ctrl + a (lock screen)\
 > Super + Ctrl + s (lock screen and suspend)
+> Super + Ctrl + d (open pavucontrol)\
 
 Focus to direction:
 
@@ -117,7 +118,7 @@ Screenshot:
 
 Session control, power control and screenshot are in right click menus.
 
-## Alt and Win
+## Swap Keys
 
 There's a `keyswap.conf` under sway directory, which did following settings:
 
