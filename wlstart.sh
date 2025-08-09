@@ -3,11 +3,11 @@
 command -v fcitx5 &>/dev/null && \
     ! pidof fcitx5 &>/dev/null && fcitx5 -d -r
 
-command -v lxqt-policykit-agent &>/dev/null && \
-    ! pidof lxqt-policykit-agent &>/dev/null && \
-        lxqt-policykit-agent 2>&1 &
+# polkit-gnome /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+command -v polkit-agent &>/dev/null && \
+    ! pidof polkit-agent &>/dev/null && \
+        polkit-agent 2>&1 &
 
 command -v kanshi &>/dev/null && \
     ! pidof kanshi &>/dev/null && \
         kanshi 2>&1 &
-
