@@ -82,7 +82,7 @@ bar-status() {
     while true; do
         _str=""
         _str+="$(muted-label)"
-        _str="${_str}$(date '+%a %b %d %H:%M')"
+        _str="${_str}$(date '+%a %b.%d %H:%M')"
         printf "%s \n" "${_str}"
         sleep 0.1
     done

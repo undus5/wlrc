@@ -3,6 +3,7 @@
 include base.conf
 include extension.conf
 # include keyswap.conf
+# include lightcolors.conf
 
 # exec swayidle timeout 7200 'swayctl.sh lock-screen'
 
