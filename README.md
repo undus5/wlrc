@@ -49,9 +49,8 @@ General control:
 
 Session control:
 
-> Super + Ctrl + a (lock screen)\
-> Super + Ctrl + s (lock screen and suspend)
-> Super + Ctrl + d (open pavucontrol)\
+> Super + Ctrl + l (lock screen)\
+> Super + Ctrl + p (lock screen and suspend)
 
 Focus to direction:
 
@@ -93,7 +92,7 @@ Volume control:
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
 > Super + / (toggle mute speaker)\
-> Super + Shift + / (toggle mute microphone)
+> Super + Ctrl + / (toggle mute microphone)
 
 Screenshot:
 
@@ -108,7 +107,7 @@ Screenshot:
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
 > Super + / (toggle mute speaker)\
-> Super + Shift + / (toggle mute microphone)
+> Super + Ctrl + / (toggle mute microphone)
 
 > Super + Up/Down/Left/Right (snap window to edge of screen, toggle)
 
