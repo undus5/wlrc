@@ -69,10 +69,13 @@ muted-label() {
     local _label
     local _vol
 
-    _vol="$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@)"
-    [[ "${_vol}" =~ MUTED ]] && _label="${_label}M"
     _vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
-    [[ "${_vol}" =~ MUTED ]] && _label="${_label}S"
+    [[ "${_vol}" =~ MUTED ]] && _label="Speaker"
+
+    _vol="$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@)"
+    if [[ "${_vol}" =~ MUTED ]]; then
+       [[ -n "${_label}" ]] && _label+=",Mic" || _label="Mic"
+    fi
 
     [[ -n "${_label}" ]] && echo "[Muted:${_label}] " || echo ""
 }
