@@ -34,11 +34,13 @@ $ ln -s ~/wlrc/labwc ~/.config/labwc
 
 ## Sway Keybindings
 
+`Super` equals `Win` key.
+
 General control:
 
-> Super + Ctrl + e (exit sway)\
-> Super + Ctrl + r (reload sway)\
-> Super + Ctrl + q (kill focused window)
+> Super + Alt + e (exit sway)\
+> Super + Alt + r (reload sway)\
+> Super + Alt + q (kill focused window)
 
 > Super + a (focus on parent container)\
 > Super + s (focus on child)\
@@ -49,8 +51,8 @@ General control:
 
 Session control:
 
-> Super + Ctrl + l (lock screen)\
-> Super + Ctrl + p (lock screen and suspend)
+> Super + Alt + l (lock screen)\
+> Super + Alt + p (lock screen and suspend)
 
 Focus to direction:
 
@@ -92,11 +94,11 @@ Volume control:
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
 > Super + / (toggle mute speaker)\
-> Super + Ctrl + / (toggle mute microphone)
+> Super + Alt + / (toggle mute microphone)
 
 Screenshot:
 
-> Super + Ctrl + c (take screenshot for selected area)
+> Super + Alt + a (take screenshot for selected area)
 > Print (take screenshot fullscreen)
 
 ## Labwc Keybindings
@@ -107,7 +109,7 @@ Screenshot:
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
 > Super + / (toggle mute speaker)\
-> Super + Ctrl + / (toggle mute microphone)
+> Super + Alt + / (toggle mute microphone)
 
 > Super + Up/Down/Left/Right (snap window to edge of screen, toggle)
 
@@ -117,20 +119,7 @@ Screenshot:
 
 Session control, power control and screenshot are in right click menus.
 
-## Swap Keys
+## CapsLock as Ctrl
 
-There's a `keyswap.conf` under sway directory, which did following settings:
-
-- Remap `CapsLock` as `Ctrl`\
-- Swap `Alt` and `Win`\
-- Enable `Numlock`
-
-The left `Alt` key is the best position for the modifier key,
-but some applications may have useful default shortcuts combined with it,
-such as `Alt + b` `Alt + f` in bash for jumping backward and forward word by word.
-It is recommended to swap `Alt` and `Win` positions then set Win as the modifier key.
-
-There's another benefit about swapping `Alt` and `Win`, if you run a virtual
-machine also using sway, you could keep the VM's keys unswapped, then use the same
-sway keybinding configs without conflicting to your host machine.
+`CapsLock` is remapped as `Ctrl`, `Numlock` is enabled by default.
 
