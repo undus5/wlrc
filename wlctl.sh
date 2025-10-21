@@ -64,6 +64,11 @@ mute-toggle-mic() {
 # sway status
 #################################################################################
 
+scratchpad-count() {
+    local _count=$(swaymsg -t get_tree | grep -c '"scratchpad_state": "fresh"')
+    [[ "${_count}" =~ ^[1-9]+[0-9]*$ ]] && echo "[Scratch: ${_count}] " || echo ""
+}
+
 muted-label() {
     wpctl-check
     local _label
@@ -84,8 +89,9 @@ bar-status() {
     local _str
     while true; do
         _str=""
+        _str+="$(scratchpad-count)"
         _str+="$(muted-label)"
-        _str="${_str}$(date '+%a %b.%d %H:%M')"
+        _str+="$(date '+%a %b.%d %H:%M')"
         printf "%s \n" "${_str}"
         sleep 0.1
     done

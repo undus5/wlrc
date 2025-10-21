@@ -49,11 +49,6 @@ General control:
 > Super + g (toggle status bar showing)
 > Super + Return (open terminal emulator, alacritty)
 
-Session control:
-
-> Super + Alt + l (lock screen)\
-> Super + Alt + p (lock screen and suspend)
-
 Focus to direction:
 
 > Super + h (focus left)\
@@ -72,19 +67,16 @@ Switch to workspaces:
 
 > Super + 1/2/3/4/5/6/7/8/9/0\
 > Super + q/w/e/r/t/y/u/i/o/p/[/]\
-> Super + z/x/c/v/b/n/m
 
 Move to workspaces:
 
 > Super + Shift + 1/2/3/4/5/6/7/8/9/0\
 > Super + Shift + q/w/e/r/t/y/u/i/o/p/[/]\
-> Super + Shift + z/x/c/v/b/n/m
 
 Layout toggle:
 
 > Super + = (switch to stacking layout)\
 > Super + \ (toggle split layout between horizontal and vertical)\
-> Super + ` (toggle current float window always on screen)
 
 > Super + ; (splitv, split next window to vertical layout)\
 > Super + ' (splith, split next window to horizontal layout)
@@ -100,6 +92,11 @@ Screenshot:
 
 > Super + Alt + a (take screenshot for selected area)
 > Print (take screenshot fullscreen)
+
+Session control:
+
+> Super + Alt + b (lock screen)\
+> Super + Alt + n (lock screen and suspend)
 
 ## Labwc Keybindings
 
