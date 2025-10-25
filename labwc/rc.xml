@@ -36,10 +36,10 @@
         <keybind key="W-period">
             <action name="Execute" command="wlctl.sh vol-up" />
         </keybind>
-        <keybind key="W-slash">
+        <keybind key="W-m">
             <action name="Execute" command="wlctl.sh mute-toggle-speaker" />
         </keybind>
-        <keybind key="W-A-slash">
+        <keybind key="W-S-m">
             <action name="Execute" command="wlctl.sh mute-toggle-mic" />
         </keybind>
     </keyboard>
@@ -54,4 +54,3 @@
     </mouse>
 
 </labwc_config>
-

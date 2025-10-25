@@ -38,9 +38,9 @@ $ ln -s ~/wlrc/labwc ~/.config/labwc
 
 General control:
 
-> Super + Alt + e (exit sway)\
-> Super + Alt + r (reload sway)\
-> Super + Alt + q (kill focused window)
+> Super + Ctrl + Escape (exit sway)\
+> Super + Ctrl + r (reload sway)\
+> Super + Escape (kill focused window)
 
 > Super + a (focus on parent container)\
 > Super + s (focus on child)\
@@ -66,17 +66,17 @@ Move to direction:
 Switch to workspaces:
 
 > Super + 1/2/3/4/5/6/7/8/9/0\
-> Super + q/w/e/r/t/y/u/i/o/p/[/]\
+> Super + q/w/e/r/t/y/u/i/o/p/[/]
 
 Move to workspaces:
 
 > Super + Shift + 1/2/3/4/5/6/7/8/9/0\
-> Super + Shift + q/w/e/r/t/y/u/i/o/p/[/]\
+> Super + Shift + q/w/e/r/t/y/u/i/o/p/[/]
 
 Layout toggle:
 
 > Super + = (switch to stacking layout)\
-> Super + \ (toggle split layout between horizontal and vertical)\
+> Super + / (toggle split layout between horizontal and vertical)
 
 > Super + ; (splitv, split next window to vertical layout)\
 > Super + ' (splith, split next window to horizontal layout)
@@ -85,18 +85,17 @@ Volume control:
 
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
-> Super + / (toggle mute speaker)\
-> Super + Alt + / (toggle mute microphone)
+> Super + m (toggle mute speaker)\
+> Super + Shift + m (toggle mute microphone)
 
 Screenshot:
 
-> Super + Alt + a (take screenshot for selected area)
+> Super + grave(backtick) (take screenshot for selected area)
 > Print (take screenshot fullscreen)
 
 Session control:
 
-> Super + Alt + b (lock screen)\
-> Super + Alt + n (lock screen and suspend)
+> Super + Shift + grave(backtick) (lock screen)
 
 ## Labwc Keybindings
 
@@ -105,8 +104,8 @@ Session control:
 
 > Super + , (volume -5%)\
 > Super + . (volume +5%)\
-> Super + / (toggle mute speaker)\
-> Super + Alt + / (toggle mute microphone)
+> Super + m (toggle mute speaker)\
+> Super + Shift + m (toggle mute microphone)
 
 > Super + Up/Down/Left/Right (snap window to edge of screen, toggle)
 
